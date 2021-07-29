@@ -11,7 +11,6 @@ def get_files_and_labels(source_path):
     print(source_path)
     for image_path in source_path.rglob("*/*.JPEG"):
         filename = image_path.absolute()
-        print(filename)
         folder = image_path.parent.name
         if folder in FOLDERS_TO_LABELS:
             images.append(filename)
